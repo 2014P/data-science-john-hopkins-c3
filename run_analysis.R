@@ -61,3 +61,7 @@ install.packages("reshape2")
 library(reshape2)
 meltedset = melt(data = cbind(mergedsubject, mergedlabels,dataset1),id.vars = c("mergedsubject","mergedlabels"))
 dataset2 = dcast(temp1, mergedsubject + mergedlabels ~ variable, mean)
+
+## writing datasets to csv
+write.csv(dataset1,file="dataset1.csv")
+write.csv(dataset2,file="dataset2.csv")
