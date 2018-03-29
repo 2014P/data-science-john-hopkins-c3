@@ -65,3 +65,7 @@ dataset2 = dcast(temp1, mergedsubject + mergedlabels ~ variable, mean)
 ## writing datasets to csv
 write.csv(dataset1,file="dataset1.csv")
 write.csv(dataset2,file="dataset2.csv")
+
+## writing dataset to txt
+write.table(x = dataset2,file = "dataset2.txt",sep = " ",row.names = FALSE)
+write.table(x = names(dataset2),file = "dataset2features.txt",sep = " ")
